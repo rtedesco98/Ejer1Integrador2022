@@ -44,8 +44,8 @@ public class testCollecttions  {
 
         System.out.println("");
 
-        assertEquals(false,pruebaHashSet.existeElemento("A"));
-        assertEquals(5,pruebaHashSet.nrosDeLaList());
+        assertEquals(true,pruebaHashSet.existeElemento("A"));
+        assertEquals(5,pruebaHashSet.nrosExistentes());
         assertEquals("[Argentina, "+"Polonia, "+"Arabia Saudita, "+"Emiratos Arabes, "+"Mexico]",pruebaHashSet.mostrar());
     }
 
@@ -71,7 +71,7 @@ public class testCollecttions  {
         }
 
         assertEquals(true,conjuntoTreeSet.existeElemento(1));
-        assertEquals("[1, "+"3, "+"4, "+"5, "+ "9]",conjuntoTreeSet.mostrar());
+        assertEquals("",conjuntoTreeSet.mostrar());
 
     }
     
@@ -95,8 +95,8 @@ public class testCollecttions  {
             System.out.println("Valor : " + valor);
         }
 
-        assertEquals(true,conjuntoLinkedHashSet.existeElemento("a"));
-        conjuntoLinkedHashSet.remover("a");
+        assertEquals(true,conjuntoLinkedHashSet.existeElemento(""));
+        conjuntoLinkedHashSet.remover("");
         assertEquals(8,conjuntoLinkedHashSet.nrosDeLaList());
         conjuntoLinkedHashSet.removerTodo();
         assertEquals("[]",conjuntoLinkedHashSet.mostrar());
@@ -136,7 +136,7 @@ public class testCollecttions  {
         hashgrupHashtable.agregar("H", grupo1);
         hashgrupHashtable.agregar("D", grupo2);
         hashgrupHashtable.agregar("E", grupo3);
-        hashgrupHashtable.eliminar("H");
+        hashgrupHashtable.eliminar("");
 
         assertEquals(grupo1,hashgrupHashtable.mostrarElemento("H"));
         assertEquals(("["+grupo2+", "+grupo1+"]") ,hashgrupHashtable.mostrarTabla());
