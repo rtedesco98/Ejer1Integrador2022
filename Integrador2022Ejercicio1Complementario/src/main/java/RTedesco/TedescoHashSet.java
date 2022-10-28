@@ -7,23 +7,24 @@ import java.util.Set;
 public class TedescoHashSet  {
     Set<Object> conjuntoHash = new HashSet<>();
 
-    public void agregar(Object algo){ 
-        conjuntoHash.add(algo);
+    public void agregar(Object obj){ 
+        conjuntoHash.add(obj);
     }
-    public String mostrar(){
-        return (conjuntoHash + "");
+    
+    public boolean existeElemento(Object obj){
+        return conjuntoHash.contains(obj);
     }
-    public boolean existeElemento(Object algo){
-        return conjuntoHash.contains(algo);
-    }
-    public void remover(Object algo){
-        conjuntoHash.remove(algo);
+    public void remover(Object obj){
+        conjuntoHash.remove(obj);
     }
     public int nrosDeLaList(){
     return conjuntoHash.size();
     }
     public void removerTodo(){
         conjuntoHash.clear();
+    }
+    public Object nrosDeLaLista() {
+        return null;
     }
     
 }

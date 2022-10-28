@@ -6,17 +6,17 @@ import java.util.Set;
 public class TedescoTreeSet {
     Set<Object> conjuntoTree = new TreeSet<>();
 
-    public void agregar(Object algo){ 
-        conjuntoTree.add(algo);
+    public void agregar(Object elem){ 
+        conjuntoTree.add(elem);
     }
     public String mostrar(){
         return (conjuntoTree + "");
     }
-    public void remover(Object algo){
-        conjuntoTree.remove(algo);
+    public void remover(Object elem){
+        conjuntoTree.remove(elem);
     }
-    public boolean existeElemento(Object algo){
-        return conjuntoTree.contains(algo);
+    public boolean existeElemento(Object elem){
+        return conjuntoTree.contains(elem);
     }
     public int nrosDeLaList(){
         return conjuntoTree.size();

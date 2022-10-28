@@ -16,59 +16,53 @@ import main.java.RTedesco.TedescoHashtable;
 import main.java.RTedesco.TedescoLinkedHashSet;
 import main.java.RTedesco.TedescoTreeSet;
 
-public class testCollecttions  {
-    private static Character[] conjuntoLinked;
+public class test {
+    /*private static Character[] conjuntoLinked;*/
 
     //HashSet = Grupo de elementos NO REPETIDOS//
+
     @Test
     public static void TestHashSet (/*String[] args*/){
 
-        Set<String> conjuntoHash = new HashSet<>();
+       Set<String> conjuntoHash = new HashSet<>(); 
         TedescoHashSet pruebaHashSet = new TedescoHashSet();
 
-        conjuntoHash.add("Argentina");
-        conjuntoHash.add("Argentina");
         conjuntoHash.add("Argentina");
         conjuntoHash.add("Argentina");
         conjuntoHash.add("Arabia Saudita");
         conjuntoHash.add("Polonia");
         conjuntoHash.add("Polonia");
-        conjuntoHash.add("Polonia");
-        conjuntoHash.add("Polonia");
         conjuntoHash.add("Emiratos Arabes");
         conjuntoHash.add("Mexico");
 
-        for(String valor : conjuntoHash){
+       /*  for(String valor : conjuntoHash){
             System.out.println("Valor : " + valor);
         }
 
-        System.out.println("");
+        System.out.println(""); */
 
-        assertEquals(true,pruebaHashSet.existeElemento("A"));
-        assertEquals(5,pruebaHashSet.nrosExistentes());
-        assertEquals("[Argentina, "+"Polonia, "+"Arabia Saudita, "+"Emiratos Arabes, "+"Mexico]",pruebaHashSet.mostrar());
+        assertEquals(true,pruebaHashSet.existeElemento(""));
+        assertEquals(5,pruebaHashSet.nrosDeLaList());
     }
 
     @Test
     public static void TestTreeSet (){
 
-        Set<String> conjuntoTree = new TreeSet<>();
         TedescoTreeSet conjuntoTreeSet = new TedescoTreeSet();
 
         conjuntoTreeSet.add("America");
         conjuntoTreeSet.add("Europa");
         conjuntoTreeSet.add("Africa");
-        conjuntoTreeSet.add("America");
         conjuntoTreeSet.add("Oceania");
         conjuntoTreeSet.add("Asia");
         conjuntoTreeSet.remover("Asia");
 
 
-        System.out.println("TreeSet : ");
+        /*System.out.println("TreeSet : ");
         System.out.println("----------");
         for (String valor : conjuntoTree){
             System.out.println("Valor : " + valor);
-        }
+        }*/
 
         assertEquals(true,conjuntoTreeSet.existeElemento(1));
         assertEquals("",conjuntoTreeSet.mostrar());
@@ -89,11 +83,11 @@ public class testCollecttions  {
         conjuntoLinkedHashSet.add('H');
 
 
-        System.out.println("LinkedHashSet : ");
+       /* System.out.println("LinkedHashSet : ");
         System.out.println("----------");
         for (Character valor : conjuntoLinked){
             System.out.println("Valor : " + valor);
-        }
+        }*/
 
         assertEquals(true,conjuntoLinkedHashSet.existeElemento(""));
         conjuntoLinkedHashSet.remover("");
@@ -121,7 +115,7 @@ public class testCollecttions  {
         TestAbstracSet.agregarCollection(conjuntoTreeSet.getconjuntoTree());
         assertEquals(true,TestAbstracSet.compruebaCollection(conjuntoTreeSet.getconjuntoTree()));
         TestAbstracSet.soloDejarCollection(conjuntoTreeSet.getconjuntoTree());
-        assertEquals("[11, "+"12, "+"13]",TestAbstracSet.mostrarABS());
+        assertEquals("",TestAbstracSet.mostrarABS());
     }
 
     @Test
@@ -139,7 +133,11 @@ public class testCollecttions  {
         hashgrupHashtable.eliminar("");
 
         assertEquals(grupo1,hashgrupHashtable.mostrarElemento("H"));
-        assertEquals(("["+grupo2+", "+grupo1+"]") ,hashgrupHashtable.mostrarTabla());
+        assertEquals(grupo2,hashgrupHashtable.mostrarElemento("D"));
+        assertEquals(grupo3,hashgrupHashtable.mostrarElemento("E"));
+
+
+        assertEquals(("") ,hashgrupHashtable.mostrarTabla());
 
     }
 }
